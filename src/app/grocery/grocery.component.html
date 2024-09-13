@@ -1,0 +1,25 @@
+<div class="empty-div-with-margin-bottom"></div>
+<div>
+    <h2 > Grocery List Manager </h2>
+    <div class="row">
+        <div class="col-sm-4 col-md-4">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter grocery items" id="txtSearch" [(ngModel)]="task" />
+                <div class="col-sm-4 col-md-4">
+                    <button class="btn btn-primary" type="button" (click)="onClick()">Add
+        <span class="glyphicon glyphicon-ok"></span>          
+        </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <ul class="list-group">
+        <li *ngFor="let task of tasks" class="list-group-item">
+             <span>{{ task.name }}</span>
+        </li>
+    </ul>   
+
+</div>
